@@ -30,3 +30,7 @@ dt,
 address {
   line-height: 1.5;
 }
+
+u {
+  text-decoration: dotted underline;
+}
