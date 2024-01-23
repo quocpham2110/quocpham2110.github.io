@@ -31,6 +31,7 @@ address {
   line-height: 1.5;
 }
 
-u {
-  text-decoration: dotted underline;
+abbr {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
