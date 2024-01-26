@@ -7,165 +7,159 @@
 
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Mozilla splash page</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <style>
-      /* header and body setup */
 
-      html {
-        font-family: 'Open Sans', sans-serif;
-        background: url(pattern.png);
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Mozilla splash page</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
+  <style>
+    /* header and body setup */
 
-      body {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        background-color: white;
-        position: relative;
-      }
+    html {
+      font-family: 'Open Sans', sans-serif;
+      background: url(pattern.png);
+    }
 
-      /* Header styling */
+    body {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: white;
+      position: relative;
+    }
 
-      header {
-        height: 150px;
-      }
+    /* Header styling */
 
-      header img {
-        width: 100px;
-        position: absolute;
-        right: 32.5px;
-        top: 32.5px;
-      }
+    header {
+      height: 150px;
+    }
 
-      h1 {
-        font-size: 50px;
-        line-height: 140px;
-        margin: 0 0 0 32.5px;
-      }
+    header img {
+      width: 100px;
+      position: absolute;
+      right: 32.5px;
+      top: 32.5px;
+    }
 
-      /* main section and video styling */
+    h1 {
+      font-size: 50px;
+      line-height: 140px;
+      margin: 0 0 0 32.5px;
+    }
 
-      main {
-        background: #ccc;
-      }
+    /* main section and video styling */
 
-      article {
-        padding: 20px;
-      }
+    main {
+      background: #ccc;
+    }
 
-      h2 {
-        margin-top: 0;
-      }
+    article {
+      padding: 20px;
+    }
 
-      p {
-        line-height: 2;
-      }
+    h2 {
+      margin-top: 0;
+    }
 
-      iframe {
-        float: left;
-        margin: 0 20px 20px 0;
-        max-width: 100%;
-      }
+    p {
+      line-height: 2;
+    }
 
-      /* further info links */
+    iframe {
+      float: left;
+      margin: 0 20px 20px 0;
+      max-width: 100%;
+    }
 
-      .further-info {
-        clear: left;
-        padding: 40px 0;
-        background: #c13832;
-        box-shadow: inset 0 3px 2px rgba(0,0,0,0.5),
-                    inset 0 -3px 2px rgba(0,0,0,0.5);
-      }
+    /* further info links */
 
-      .further-info a {
-        width: 25%;
-        display: block;
-        float: left;
-      }
+    .further-info {
+      clear: left;
+      padding: 40px 0;
+      background: #c13832;
+      box-shadow: inset 0 3px 2px rgba(0, 0, 0, 0.5),
+        inset 0 -3px 2px rgba(0, 0, 0, 0.5);
+    }
 
-      .further-info img {
-        max-width: 100%;
-      }
+    .further-info a {
+      width: 25%;
+      display: block;
+      float: left;
+    }
 
-      .clearfix {
-        clear: both;
-      }
+    .further-info img {
+      max-width: 100%;
+    }
 
-      /* Red panda image */
+    .clearfix {
+      clear: both;
+    }
 
-      .red-panda img {
-        display: block;
-        max-width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Mozilla</h1>
+    /* Red panda image */
 
-      <img src="./originals/firefoxlogo120.png" alt="firefox logo" />
-    </header>
+    .red-panda img {
+      display: block;
+      max-width: 100%;
+    }
+  </style>
+</head>
 
-    <main>
-      <article>
-        <iframe
-          width="400"
-          height="315"
-          src="https://www.youtube.com/embed/ojcNcvb1olg?si=Y4C9x6yl7niwHCdR"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+<body>
+  <header>
+    <h1>Mozilla</h1>
 
-        <h2>Rocking the free web</h2>
+    <img src="./originals/firefoxlogo120.png" alt="firefox logo" />
+  </header>
 
-        <p>
-          Mozilla are a global community of technologists, thinkers, and
-          builders, working together to keep the Internet alive and accessible,
-          so people worldwide can be informed contributors and creators of the
-          Web. We believe this act of human collaboration across an open
-          platform is essential to individual growth and our collective future.
-        </p>
+  <main>
+    <article>
+      <iframe width="400" height="315" src="https://www.youtube.com/embed/ojcNcvb1olg?si=Y4C9x6yl7niwHCdR"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
 
-        <p>
-          Click on the images below to find more information about the cool
-          stuff Mozilla does.
-          <a href="https://www.flickr.com/photos/mathiasappel/21675551065/"
-            >Red panda picture</a
-          >
-          by Mathias Appel.
-        </p>
-      </article>
+      <h2>Rocking the free web</h2>
 
-      <div class="further-info">
-        <!-- insert images with srcsets and sizes -->
-        <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img>
-        </a>
-        <a href="https://www.mozilla.org/">
-          <img>
-        </a>
-        <a href="https://addons.mozilla.org/">
-          <img>
-        </a>
-        <a href="https://developer.mozilla.org/en-US/">
-          <img>
-        </a>
-        <div class="clearfix"></div>
-      </div>
+      <p>
+        Mozilla are a global community of technologists, thinkers, and
+        builders, working together to keep the Internet alive and accessible,
+        so people worldwide can be informed contributors and creators of the
+        Web. We believe this act of human collaboration across an open
+        platform is essential to individual growth and our collective future.
+      </p>
 
-      <div class="red-panda">
-        <!-- insert picture element -->
-      </div>
-    </main>
-  </body>
+      <p>
+        Click on the images below to find more information about the cool
+        stuff Mozilla does.
+        <a href="https://www.flickr.com/photos/mathiasappel/21675551065/">Red panda picture</a>
+        by Mathias Appel.
+      </p>
+    </article>
+
+    <div class="further-info">
+      <a href="https://www.mozilla.org/en-US/firefox/new/">
+        <img src="./originals/firefoxlogo120.png" alt="firefox logo" sizes="(max-width: 500px) 120px"
+          srcset="./originals/firefoxlogo120.png 120w, ./originals/firefoxlogo400.png 400w, " />
+      </a>
+      <a href="https://www.mozilla.org/">
+        <img src="./originals/mozilladinosaurhead120.png" alt="mozilla dinosaur head" sizes="(max-width: 500px) 120px"
+          srcset="./originals/mozilladinosaurhead120.png 120w, ./originals/mozilladinosaurhead400.png 400w, " />
+      </a>
+      <a href="https://addons.mozilla.org/">
+        <img src="./originals/firefoxaddons120.jpg" alt="firefox addons" sizes="(max-width: 500px) 120px"
+          srcset="./originals/firefoxaddons120.jpg 120w, ./originals/firefoxaddons400.jpg 400w, " />
+      </a>
+      <a href="https://developer.mozilla.org/en-US/">
+        <img src="./originals/mdn.svg" alt="firefox logo" />
+      </a>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="red-panda">
+      <!-- insert picture element -->
+    </div>
+  </main>
+</body>
+
 </html>
