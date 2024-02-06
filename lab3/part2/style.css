@@ -9,4 +9,13 @@ div {
     height: 200px;
     margin: auto;
     background-color: orange;
+
+    /* rems related to root font-size (default 16px that define at html)
+    *  1.1rems = 16 * 1.1 = 17.6px
+    */
+    font-size: 1.1rem; 
+    text-align: center;
+    line-height: 200px;
+    color: blue;
+    text-shadow: 2px 2px 5px black;
 }
