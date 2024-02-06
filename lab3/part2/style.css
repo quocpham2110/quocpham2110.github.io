@@ -2,4 +2,11 @@ html {
     font-family: sans-serif;
   }
   
-  /* Your CSS below here */
+/* Your CSS below here */
+
+div {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: orange;
+}
