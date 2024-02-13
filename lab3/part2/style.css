@@ -1,21 +1,33 @@
 html {
-    font-family: sans-serif;
-  }
-  
+  font-family: sans-serif;
+}
+
 /* Your CSS below here */
 
 div {
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    background-color: orange;
+  width: 200px;
+  height: 200px;
+  margin: auto;
 
-    /* rems related to root font-size (default 16px that define at html)
+  border-radius: 10%;
+  border: 1px solid rgb(255, 123, 0);
+  background-color: orange;
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+
+  /* rems related to root font-size (default 16px that define at html)
     *  1.1rems = 16 * 1.1 = 17.6px
     */
-    font-size: 1.1rem; 
-    text-align: center;
-    line-height: 200px;
-    color: blue;
-    text-shadow: 2px 2px 5px black;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 200px;
+  color: rgb(0, 0, 206);
+  text-shadow: 2px 2px 5px black;
+
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.6), 2px 2px 5px black;
 }
