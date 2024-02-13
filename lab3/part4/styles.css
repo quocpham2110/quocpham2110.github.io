@@ -24,13 +24,19 @@ img {
   display: flex;
 }
 
-article {
+.grid article {
   width: 75%;
   padding-right: 20px;
 }
 
-aside {
+.grid aside {
   width: 25%;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1px 1px;
 }
 
 article img {
