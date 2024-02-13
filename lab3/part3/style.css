@@ -43,3 +43,42 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url(./styles/fonts/Raleway-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(./styles/fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Roboto-Regular', serif;
+}
+
+h1, h2 {
+  font-family: 'Raleway-Bold', sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p, li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
+}
+
+section > h2 + p {
+  text-indent: 20px;
+}
