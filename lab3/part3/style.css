@@ -82,3 +82,27 @@ p, li {
 section > h2 + p {
   text-indent: 20px;
 }
+
+a {
+  transition: 0.2s;
+  outline: none;
+}
+
+a:link, a:visited{
+  color: #a66;
+}
+
+a:focus, a:hover {
+  text-decoration: none;
+  /* color: #e00 */
+}
+
+a:active {
+  text-shadow: 1px 1px 3px #c22;
+}
+
+a[href*="http"] {
+  padding-right: 2rem;
+  background: url(./styles/icons/external-link-52.png) no-repeat 100% 0;
+  background-size: 1.6rem 1.6rem;
+}
