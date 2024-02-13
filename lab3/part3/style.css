@@ -115,3 +115,29 @@ li {
   list-style: "\2714";
   padding-left: 0.5rem;
 }
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  padding: 2rem;
+  text-align: center;
+  
+  border: 1px solid #a66;
+  border-radius: 5px;
+  margin: 2rem 0;
+  transition: 0.1s;
+}
+
+nav li a:hover {
+  background-color: #a66;
+  color: white
+}
+
+nav li a:active {
+  transform: translateY(2px);
+  text-shadow: none;
+}
