@@ -22,10 +22,20 @@ const imageAltList = [
   'Butterfly lands on the leaf',
 ];
 /* Looping through images */
+imageNameList.forEach((image, index) => {
+  const newImage = document.createElement('img');
+  newImage.setAttribute('src', `images/${image}`);
+  newImage.setAttribute('alt', imageAltList[index]);
+  thumbBar.appendChild(newImage);
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
+  newImage.addEventListener('click', onImageClicked);
+
+  function onImageClicked(element) {
+    const src = element.target.getAttribute('src');
+    const alt = element.target.getAttribute('alt');
+    displayedImage.setAttribute('src', src);
+    displayedImage.setAttribute('alt', alt);
+  }
+});
 
 /* Wiring up the Darken/Lighten button */
