@@ -83,7 +83,20 @@ class EvilCircle extends Shape {
     this.color = 'white';
     this.size = 10;
   }
+
+  draw() {
+    ctx.beginPath();
+    ctx.strokeStyle = this.color;
+    ctx.lineWidth = 3;
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.stroke();
+  }
 }
+
+const evilCirle = new EvilCircle(
+  random(0 + 10, width - 10), 
+  random(0 + 10, height - 10)
+);
 
 window.addEventListener('keydown', (e) => {
   switch (e.key) {
@@ -123,6 +136,8 @@ while (balls.length < 25) {
 function loop() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
   ctx.fillRect(0, 0, width, height);
+
+  evilCirle.draw();
 
   for (const ball of balls) {
     ball.draw();
