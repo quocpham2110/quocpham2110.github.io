@@ -122,7 +122,6 @@ class EvilCircle extends Shape {
 
         if (distance < this.realSize + ball.size) {
           ball.exists = false;
-          ball.color = 'transparent';
         }
       }
     }
@@ -166,6 +165,8 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+const ballCounter = document.querySelector('.ball-counter');
+
 function loop() {
   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
   ctx.fillRect(0, 0, width, height);
@@ -174,12 +175,16 @@ function loop() {
   evilCirle.checkBounds();
   evilCirle.collisionDetect();
 
+  let existBalls = 0;
   for (const ball of balls) {
     if (ball.exists) {
+      existBalls++;
       ball.draw();
       ball.update();
       ball.collisionDetect();
     }
+
+    ballCounter.textContent = `Ball count: ${existBalls}`;
   }
 
   requestAnimationFrame(loop);
