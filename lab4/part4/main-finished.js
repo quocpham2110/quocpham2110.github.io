@@ -32,6 +32,7 @@ class Ball extends Shape {
     super(x, y, velX, velY);
     this.color = color;
     this.size = size;
+    this.exists = true;
   }
 
   draw() {
@@ -111,28 +112,38 @@ class EvilCircle extends Shape {
       this.y = 0 + this.realSize;
     }
   }
+
+  collisionDetect() {
+    for (const ball of balls) {
+      if (ball.exists) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.realSize + ball.size) {
+          ball.exists = false;
+          ball.color = 'transparent';
+        }
+      }
+    }
+  }
 }
 
-const evilCirle = new EvilCircle(
-  //   random(0 + 10, width - 10),
-  //   random(0 + 10, height - 10)
-  width - 18,
-  height - 18
-);
+const evilCirle = new EvilCircle(random(0, width), random(0, height));
 
 window.addEventListener('keydown', (e) => {
   switch (e.key) {
     case 'a':
-      this.x -= this.velX;
+      evilCirle.x -= evilCirle.velX;
       break;
     case 'd':
-      this.x += this.velX;
+      evilCirle.x += evilCirle.velX;
       break;
     case 'w':
-      this.y -= this.velY;
+      evilCirle.y -= evilCirle.velY;
       break;
     case 's':
-      this.y += this.velY;
+      evilCirle.y += evilCirle.velY;
       break;
   }
 });
@@ -161,11 +172,14 @@ function loop() {
 
   evilCirle.draw();
   evilCirle.checkBounds();
+  evilCirle.collisionDetect();
 
   for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
+    if (ball.exists) {
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+    }
   }
 
   requestAnimationFrame(loop);
