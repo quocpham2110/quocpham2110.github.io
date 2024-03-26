@@ -38,7 +38,7 @@
             </ul>
 
             <form class="search">
-                <input type="search" name="q" placeholder="Search query" aria-label="Search site content">
+                <input type="search" name="q" placeholder="Search query" aria-label="Search box">
                 <input type="submit" value="Go!" aria-label="Search button">
             </form>
         </nav>
@@ -126,7 +126,7 @@
                     <p>It looks like your browser doesn't support HTML5 audio players. Here is a <a href="media/bear.mp3">link to the audio</a> instead.</p>
                 </audio>
                 <div class="transcript-container">
-                    <button>Show transcript</button>
+                    <button aria-label="Show or hide transcript" title="Show">Show transcript</button>
                     <p class="transcript">
                       This isn't really an audio fact file about bears, but it is an audio file that you can transcribe.
                     </p>    
@@ -143,7 +143,7 @@
                 </p>
 
                 <section class="comments">
-                    <button class="show-hide">Show comments</button>
+                    <button class="show-hide" aria-label="Show or hide comment" title="Show">Show comments</button>
 
                     <div class="comment-wrapper">
 
@@ -151,7 +151,7 @@
                             Add comment
                         </h2>
 
-                        <form class="comment-form" aria-label="comment-form">
+                        <form class="comment-form">
                             <div class="flex-pair">
                                 <label for="name">Your name:</label>
                                 <input type="text" name="name" id="name" placeholder="Enter your name">
@@ -161,7 +161,7 @@
                                 <input type="text" name="comment" id="comment" placeholder="Enter your comment">
                             </div>
                             <div>
-                                <input type="submit" value="Submit comment" aria-label="Submit your comment">
+                                <input type="submit" value="Submit comment" aria-label="Submit comment">
                             </div>
                         </form>
 

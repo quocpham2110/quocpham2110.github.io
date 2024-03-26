@@ -10,9 +10,11 @@ showHideBtn.onclick = function () {
   if (showHideText === 'Show comments') {
     showHideBtn.textContent = 'Hide comments';
     commentWrapper.style.display = 'block';
+    showHideBtn.setAttribute('title', 'Hide');
   } else {
     showHideBtn.textContent = 'Show comments';
     commentWrapper.style.display = 'none';
+    showHideBtn.setAttribute('title', 'Show');
   }
 };
 
@@ -55,8 +57,11 @@ transcriptBtn.onclick = function () {
   if (transcriptBtn.textContent === 'Show transcript') {
     transcript.classList.add('show');
     transcriptBtn.textContent = 'Hide transcript';
+    transcriptBtn.setAttribute('title', 'Hide');
+
   } else {
-    transcript.classList.remove("show");
+    transcript.classList.remove('show');
     transcriptBtn.textContent = 'Show transcript';
+    transcriptBtn.setAttribute('title', 'Show');
   }
 };
