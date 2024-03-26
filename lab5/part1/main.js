@@ -5,9 +5,9 @@ const commentWrapper = document.querySelector('.comment-wrapper');
 
 commentWrapper.style.display = 'none';
 
-showHideBtn.onclick = function() {
+showHideBtn.onclick = function () {
   let showHideText = showHideBtn.textContent;
-  if(showHideText === 'Show comments') {
+  if (showHideText === 'Show comments') {
     showHideBtn.textContent = 'Hide comments';
     commentWrapper.style.display = 'block';
   } else {
@@ -23,7 +23,7 @@ const nameField = document.querySelector('#name');
 const commentField = document.querySelector('#comment');
 const list = document.querySelector('.comment-container');
 
-form.onsubmit = function(e) {
+form.onsubmit = function (e) {
   e.preventDefault();
   submitComment();
 };
@@ -45,3 +45,18 @@ function submitComment() {
   nameField.value = '';
   commentField.value = '';
 }
+
+// Control transcript display
+
+const transcript = document.querySelector('.transcript');
+const transcriptBtn = document.querySelector('.transcript-container button');
+
+transcriptBtn.onclick = function () {
+  if (transcriptBtn.textContent === 'Show transcript') {
+    transcript.classList.add('show');
+    transcriptBtn.textContent = 'Hide transcript';
+  } else {
+    transcript.classList.remove("show");
+    transcriptBtn.textContent = 'Show transcript';
+  }
+};
